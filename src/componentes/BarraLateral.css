@@ -1,0 +1,40 @@
+.barra-lateral {
+  width: 230px;
+  background-color: #0f172a;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.barra-lateral h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+
+.barra-lateral ul {
+  list-style: none;
+}
+
+.barra-lateral li {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+.barra-lateral li:hover {
+  color: #38bdf8;
+  transform: translateX(5px);
+}
+.barra-navegacion {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}

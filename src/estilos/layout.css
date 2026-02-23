@@ -1,0 +1,19 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.contenido {
+  flex: 1;
+}
+
+main {
+  padding: 40px;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}

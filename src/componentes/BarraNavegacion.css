@@ -1,0 +1,21 @@
+.barra-navegacion {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.titulo-navbar {
+  font-weight: 600;
+  font-size: 18px;
+}
