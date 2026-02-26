@@ -1,0 +1,123 @@
+.acercaDeDiv {
+  width: min(1120px, 92%);
+  margin: 2rem auto;
+  color: var(--text);
+}
+
+.acercaDeHero {
+  position: relative;
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: clamp(1.2rem, 3vw, 2.2rem);
+  overflow: hidden;
+  background-image: url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.acercaDeHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(25, 14, 10, 0.58), rgba(25, 14, 10, 0.72));
+}
+
+.acercaDeHero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.acercaDeEtiqueta {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.32rem 0.7rem;
+}
+
+.acercaDeHero h2 {
+  margin: 0.9rem 0 0.7rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.acercaDeLead {
+  margin: 0;
+  max-width: 64ch;
+  line-height: 1.65;
+  color: #fff4e8;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.acercaDeGrid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.acercaDeCard {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 220px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 18px rgba(34, 20, 11, 0.14);
+}
+
+.acercaDeCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(25, 14, 10, 0.55), rgba(25, 14, 10, 0.72));
+}
+
+.acercaDeCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cardMision {
+  background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80");
+}
+
+.cardVision {
+  background-image: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80");
+}
+
+.cardValores {
+  background-image: url("https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1200&q=80");
+}
+
+.acercaDeCard h3 {
+  margin: 0 0 0.6rem;
+  color: var(--white);
+}
+
+.acercaDeCard p,
+.acercaDeCard li {
+  margin: 0;
+  line-height: 1.6;
+  color: #fff3e7;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.acercaDeCard ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .acercaDeGrid {
+    grid-template-columns: 1fr;
+  }
+}

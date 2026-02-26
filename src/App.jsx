@@ -1,46 +1,29 @@
 import { useState } from "react";
-import BarraNavegacion from "./componentes/BarraNavegacion";
-import BarraLateral from "./componentes/BarraLateral";
-import Inicio from "./paginas/inicio";
-import "./estilos/layout.css";
-import "./estilos/global.css";
+import ContenedorTarjeta from "./ContenedorTarjeta";
+import Encabezado from "./Encabezado";
+import PieComponente from "./PieComponente";
+import "./App.css";
 
 function App() {
-  const [categoria, setCategoria] = useState("Comida");
-  const [menuAbierto, setMenuAbierto] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuAbierto(!menuAbierto);
-  };
-
-  const cerrarMenu = () => {
-    setMenuAbierto(false);
-  };
+  const [vista, setVista] = useState("Inicio");
+  const [categoria, setCategoria] = useState("Todas");
 
   return (
-    <div className="layout">
-      <BarraNavegacion abrirMenu={toggleMenu} />
-
-      <div className="contenido">
-        <main>
-          <Inicio categoria={categoria} />
-        </main>
+    <div className="appLayout">
+      <Encabezado
+        cambiarVista={setVista}
+        vistaActual={vista}
+        cambiarCategoria={setCategoria}
+      />
+      <div className="contenidoPrincipal">
+        <ContenedorTarjeta
+          vista={vista}
+          categoria={categoria}
+          cambiarVista={setVista}
+          cambiarCategoria={setCategoria}
+        />
       </div>
-
-      {/* Overlay oscuro al abrir menú */}
-      {menuAbierto && (
-        <>
-          <div className="overlay" onClick={cerrarMenu}></div>
-
-          <BarraLateral
-            categoriaActiva={categoria}
-            cambiarCategoria={(cat) => {
-              setCategoria(cat);
-              cerrarMenu();
-            }}
-          />
-        </>
-      )}
+      <PieComponente />
     </div>
   );
 }

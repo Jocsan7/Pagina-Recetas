@@ -1,0 +1,114 @@
+.contacto {
+  width: min(980px, 92%);
+  margin: 2rem auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 18px rgba(34, 20, 11, 0.08);
+}
+
+.contacto h2 {
+  margin: 0 0 0.4rem;
+  color: var(--text);
+}
+
+.contacto p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.contactoApartados {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.apartadoCard {
+  position: relative;
+  min-height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0.9rem;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border);
+}
+
+.apartadoCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 12, 8, 0.5), rgba(20, 12, 8, 0.72));
+}
+
+.apartadoCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cardHorario {
+  background-image: url("https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80");
+}
+
+.cardAsesoria {
+  background-image: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80");
+}
+
+.cardRedes {
+  background-image: url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80");
+}
+
+.apartadoCard h3 {
+  margin: 0 0 0.45rem;
+  color: var(--white);
+  font-size: 1.03rem;
+}
+
+.apartadoCard p {
+  margin: 0.25rem 0;
+  color: #fff3e8;
+  line-height: 1.45;
+}
+
+.form-contacto {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7rem 0.75rem;
+  font: inherit;
+  background: var(--surface);
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(184, 92, 56, 0.2);
+}
+
+.form-contacto button {
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ff7b46 0%, var(--primary) 100%);
+  color: var(--white);
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+.form-contacto button:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 900px) {
+  .contactoApartados {
+    grid-template-columns: 1fr;
+  }
+}
