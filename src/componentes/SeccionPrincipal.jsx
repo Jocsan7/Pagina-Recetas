@@ -30,7 +30,7 @@ const recetas = [
     }, 4000);
 
     return () => clearInterval(intervalo);
-  }, []);
+  }, [recetas.length]);
 
   return (
     <section className="seccion-principal">

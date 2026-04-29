@@ -28,7 +28,7 @@ function Inicio() {
     }, 4000);
 
     return () => clearInterval(intervalo);
-  }, []);
+  }, [recetas.length]);
 
   const recetaActual = recetas[indice];
 
